@@ -18,15 +18,13 @@ namespace Wba.Oefening.Games.Web.Controllers
             _gameRepository = new GameRepository();
         }
 
-        [Route("games")]
-        [Route("games/all")]
-
+       
         public IActionResult Index()
         {
             return Content("I should make a view + view model for this!");
         }
 
-        [Route("games/{id}")]
+        
         public IActionResult ShowGame(int id)
         {
             return Content("I should make a view + view model for this!");

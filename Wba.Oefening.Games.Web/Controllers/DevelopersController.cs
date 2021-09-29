@@ -18,14 +18,13 @@ namespace Wba.Oefening.Games.Web.Controllers
             _developerRepository = new DeveloperRepository();
         }
 
-        [Route("developers")]
-        [Route("developers/all")]
+       
         public IActionResult Index()
         {
             return Content("I should make a view + view model for this!");
         }
 
-        [Route("developers/{id}")]
+      
         public IActionResult ShowDeveloper(int id)
         {
             return Content("I should make a view + view model for this!");

@@ -49,9 +49,13 @@ namespace Wba.Oefening.Games.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "Home",
-                    pattern: "Home",
-                    defaults: new {Controller="Home",Action="Index" });
+                    name: "ShowDeveloper",
+                    pattern: "developers/{id}",
+                    defaults: new { Controller = "Developers", Action = "ShowDeveloper" });
+                endpoints.MapControllerRoute(
+                    name: "ShowGame",
+                    pattern: "games/{id}",
+                    defaults: new { Controller = "Games", Action = "ShowGame" });
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
