@@ -10,12 +10,12 @@ namespace Wba.Oefening.Games.Web.Controllers
 {
     public class DevelopersController : Controller
     {
-        private readonly DeveloperRepository developerRepository;
+        private readonly DeveloperRepository _developerRepository;
 
         public DevelopersController()
         {
             //initialize service classes
-            developerRepository = new DeveloperRepository();
+            _developerRepository = new DeveloperRepository();
         }
 
         [Route("developers")]

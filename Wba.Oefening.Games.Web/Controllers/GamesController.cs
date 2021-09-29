@@ -11,11 +11,11 @@ namespace Wba.Oefening.Games.Web.Controllers
 
     public class GamesController : Controller
     {
-        private readonly GameRepository gameRepository;
+        private readonly GameRepository _gameRepository;
 
         public GamesController()
         {
-            gameRepository = new GameRepository();
+            _gameRepository = new GameRepository();
         }
 
         [Route("games")]
