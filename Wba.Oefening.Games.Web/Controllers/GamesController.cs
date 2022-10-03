@@ -21,7 +21,7 @@ namespace Wba.Oefening.Games.Web.Controllers
        
         public IActionResult Index()
         {
-            return Content("I should make a view + view model for this!");
+            return Content("I should make a view + view model for this");
         }
 
         
