@@ -20,14 +20,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "ShowDeveloper",
-    pattern: "developers/{id}",
-    defaults: new { Controller = "Developers", Action = "ShowDeveloper" });
-app.MapControllerRoute(
-    name: "ShowGame",
-    pattern: "games/{id}",
-    defaults: new { Controller = "Games", Action = "ShowGame" });
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
