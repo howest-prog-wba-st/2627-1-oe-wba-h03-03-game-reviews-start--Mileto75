@@ -1,4 +1,4 @@
-﻿namespace Wba.Oefening.Games.Core
+﻿namespace Wba.Oefening.Games.Core.Entities
 {
     public class Game
     {

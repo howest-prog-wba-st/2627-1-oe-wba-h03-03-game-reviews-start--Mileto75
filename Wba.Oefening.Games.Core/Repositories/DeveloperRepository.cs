@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Wba.Oefening.Games.Core.Entities;
 
-namespace Wba.Oefening.Games.Core
+namespace Wba.Oefening.Games.Core.Repositories
 {
     public class DeveloperRepository
     {

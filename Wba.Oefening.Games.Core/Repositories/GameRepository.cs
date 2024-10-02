@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Wba.Oefening.Games.Core.Entities;
 
-namespace Wba.Oefening.Games.Core
+namespace Wba.Oefening.Games.Core.Repositories
 {
     public class GameRepository
     {
@@ -15,7 +16,7 @@ namespace Wba.Oefening.Games.Core
                     Id = 1,
                     Title = "Wolfenstein Colossus",
                     Rating = 1,
-                    Developer = 
+                    Developer =
                         developerRepository.GetDevelopers().
                             First(d => d.Id == 1)
                 },
