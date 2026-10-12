@@ -42,8 +42,28 @@ namespace Wba.Oefening.Games.Web.Controllers
         
         public IActionResult ShowGame(int id)
         {
-            return Content("I should make a view + view model for this!");
+            //get the game with id = id
+            var game = _gameRepository.GetGames()
+                .FirstOrDefault(g => g.Id == id);
+            //check if null
+            if (game == null) 
+            {
+                return NotFound();
+            }
+            //Put in viewmodel
+            var gamesShowGameViewModel = new GamesShowGameViewModel
+            {
+                Title = game.Title,
+                Developer = new BaseViewModel
+                {
+                    Id = game.Developer.Id,
+                    Name = game.Developer.Name
+                },
+                Image = "",
+                Rating = (int)game.Rating,
+            };
+            //return to view
+            return View(gamesShowGameViewModel);
         }
-
     }
 }
