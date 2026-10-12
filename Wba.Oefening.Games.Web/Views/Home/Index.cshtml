@@ -2,5 +2,15 @@
     ViewData["Title"] = "This is the page title";
 }
 
-<p class="jumbotron">Read the exercise requirements!!</p>
-
+<div class="row text-center">
+    <div class="col-lg-4 mx-auto">
+        <a asp-controller="Games"
+           asp-action="Index"
+           class="btn btn-info">Games</a>
+    </div>
+    <div class="col-lg-4 mx-auto">
+        <a asp-controller="Developers"
+           asp-action="Index"
+           class="btn btn-info">Developers</a>
+    </div>
+</div>
