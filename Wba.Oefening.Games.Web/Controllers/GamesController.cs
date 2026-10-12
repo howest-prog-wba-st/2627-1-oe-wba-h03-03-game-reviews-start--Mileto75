@@ -59,7 +59,7 @@ namespace Wba.Oefening.Games.Web.Controllers
                     Id = game.Developer.Id,
                     Name = game.Developer.Name
                 },
-                Image = "",
+                Image = "https://placehold.co/400",
                 Rating = (int)game.Rating,
             };
             //return to view

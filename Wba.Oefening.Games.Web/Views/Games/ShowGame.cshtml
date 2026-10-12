@@ -1,13 +1,33 @@
 ﻿@model GamesShowGameViewModel
 
-@for(int i = 0;i<5;i++)
-{
-    if(i < Model.Rating)
-    {
-        <i class="icon-star"></i>
-    }
-    else
-    {
-        <i class="icon-star-empty"></i>
-    }
-}
+<div class="row">
+    <div class="col col-lg-4 mx-auto">
+        <div class="card text-center" style="width: 18rem;">
+            <img src="@Model.Image" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Title</h5>
+                <p class="card-text">
+                   <a class="link"
+                      asp-controller="Developers"
+                      asp-action="ShowDeveloper"
+                      asp-route-id="@Model.Developer.Id">@Model.Developer.Name</a>
+                </p>
+                <a asp-controller="Games"
+                   asp-action="Index" class="btn btn-primary">Back</a>
+            </div>
+            <div class="card-footer">
+                @for(int i = 0;i<5;i++)
+                {
+                    if(i < Model.Rating)
+                    {
+                        <i class="icon-star"></i>
+                    }
+                    else
+                    {
+                        <i class="icon-star-empty"></i>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
