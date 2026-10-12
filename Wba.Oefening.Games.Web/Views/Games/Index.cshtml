@@ -1,7 +1,24 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@model GamesIndexViewModel
 
-<h2>Index</h2>
-
+<div class="row">
+    <h3>@Model.PageTitle</h3>
+</div>
+<div class="row">
+    @foreach(var game in Model.Games)
+    {
+        <div class="col col-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-title">
+                        @game.Name
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-info" asp-controller="Games"
+                        asp-action="ShowGame"
+                        asp-route-id="@game.Id">Info</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
